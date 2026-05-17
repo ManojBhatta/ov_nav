@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot name="robot_name" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <material name="blue">
+        <color rgba="0 0 0.8 1" />
+    </material>
+    <material name="red">
+        <color rgba="0.8 0 0 1" />
+    </material>
+    <material name="grey">
+        <color rgba="0.9 0.95 0.95 1.0" />
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 1" />
+    </material>
+    <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0" />
+    </material>
+
+<!-- multiply all the distances and values by 0.3 -->
+    <!-- Properties -->
+    <xacro:property name="scale_stl" value="0.3 0.3 0.3" />
+    <xacro:property name="wheel_dist_x" value="0.063" />
+    <xacro:property name="wheel_dist_y" value="0.105" />
+    <xacro:property name="lidar_dist_x" value="0.109" />
+    <xacro:property name="lidar_dist_y" value="0" />
+    <xacro:property name="lidar_dist_z" value="0.072" />
+    <xacro:property name="pie" value="3.1415926" />
+
+    <!-- Wheel properties -->
+    <xacro:property name="wheel_radius" value="0.06" />
+    <xacro:property name="wheel_thickness" value="0.03" />
+    <xacro:property name="wheel_mass" value="1.0" />
+
+    <!-- Base properties -->
+    <xacro:property name="base_mass" value="15.0" />
+    <xacro:property name="base_length" value="0.228" />
+    <xacro:property name="base_width" value="0.1455" />
+    <xacro:property name="base_height" value="0.054" />
+    <xacro:property name="camera_height" value="0.600" />
+
+
+</robot>
