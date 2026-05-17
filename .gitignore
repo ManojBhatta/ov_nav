@@ -1,0 +1,14 @@
+.vscode
+
+# pycache
+**__pycache__**
+
+/ros2_ws/build
+/ros2_ws/install
+/ros2_ws/log
+
+**.venv
+
+vlmap/depth.mp4
+vlmap/rgb.mp4
+vlmap/lseg/checkpoints/
