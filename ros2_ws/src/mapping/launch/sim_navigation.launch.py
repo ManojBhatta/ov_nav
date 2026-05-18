@@ -1,12 +1,16 @@
-from launch import LaunchDescription
+from launch import LaunchDescription 
 from launch_ros.substitutions import FindPackageShare
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.substitutions import LaunchConfiguration
 from ament_index_python.packages import get_package_share_directory
 from launch_ros.actions import Node
 import os
 
 def generate_launch_description():
+    # create a launch argument for map
+    default_map_path = os.path.join(get_package_share_directory('mapping'), 'maps', 'first_map.yaml')
+    map_arg = LaunchConfiguration('map', default=default_map_path)
     # Start Gazebo
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -42,7 +46,7 @@ def generate_launch_description():
                 'use_sim_time': 'true',
                 'autostart': 'true',
                 'log_level': 'info',
-                'map': get_package_share_directory('mapping') + '/maps/first_map.yaml'
+                'map': map_arg
             }.items()
         )]
     )
