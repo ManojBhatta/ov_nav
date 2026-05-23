@@ -1,3 +1,5 @@
+
+
 Implementation from paper [Visual Language Maps for Robot Navigation](https://vlmaps.github.io/)  
 How it works?  
 1. Dense pixel level embeddings are generated for each rgb frame from Posed RGB-D sequence.
@@ -20,8 +22,4 @@ Sample images for visualizing similarity in VLMap.
   </tr>
 </table>
 
-
-<video width="100%" controls>
-  <source src="assets/test_vid.mp4" type="video/webm">
-</video>
-
+https://github.com/user-attachments/assets/d9b3dd53-e265-4e3c-bfc8-6cdcc3bde7e8
